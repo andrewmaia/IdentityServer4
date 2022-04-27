@@ -2,10 +2,14 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using MvcClient.Models;
+using Newtonsoft.Json.Linq;
 
 namespace MvcClient.Controllers
 {
@@ -38,5 +42,17 @@ namespace MvcClient.Controllers
         {
             return SignOut("Cookies", "oidc");
         } 
+
+        public async Task<IActionResult> CallApi()
+        {
+            var accessToken = await HttpContext.GetTokenAsync("access_token");
+
+            var client = new HttpClient();
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", accessToken);
+            var content = await client.GetStringAsync("https://localhost:6001/identity");
+
+            ViewBag.Json = JArray.Parse(content).ToString();
+            return View("json");
+        }
     }
 }

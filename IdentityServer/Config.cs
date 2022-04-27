@@ -68,7 +68,8 @@ namespace IdentityServer
                             {
                                 IdentityServerConstants.StandardScopes.OpenId,
                                 IdentityServerConstants.StandardScopes.Profile,
-                                "recursoDeIdentidade1"
+                                "recursoDeIdentidade1",
+                                "api1"
                             }
                         }           
         };

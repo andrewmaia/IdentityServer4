@@ -42,10 +42,14 @@ namespace MvcClient
                     options.ClientSecret = "secret";
                     options.ResponseType = "code";
                     options.Scope.Add("recursoDeIdentidade1");
+                    options.Scope.Add("api1");
+
                     options.GetClaimsFromUserInfoEndpoint = true;  
                     options.ClaimActions.MapJsonKey("Claim1", "Claim1");
                     options.ClaimActions.MapJsonKey("Claim2", "Claim2");                   
                     options.SaveTokens = true;
+
+                    
                 });            
             
             services.AddControllersWithViews();
