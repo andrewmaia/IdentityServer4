@@ -1,0 +1,13 @@
+
+<div class="content" role="main">
+    <div [hidden]="authService.isLoggedIn()">
+        <button (click)="login()">Login</button>
+    </div>
+    <br/>    
+    <div [hidden]="!authService.isLoggedIn()">
+        Olá Usuario!
+        <button (click)="authService.logout()">Logout</button>        
+    </div>    
+</div>
+<br/>
+<router-outlet></router-outlet>

@@ -71,6 +71,29 @@ namespace IdentityServer
                                 "recursoDeIdentidade1",
                                 "api1"
                             }
+                        },                
+                new Client
+                        {
+                            ClientId = "angular",
+                            
+
+                            AllowedGrantTypes = GrantTypes.Implicit,
+                            AllowAccessTokensViaBrowser = true,
+
+                            // where to redirect to after login-callback
+                            RedirectUris = { "http://localhost:4200/login-callback" },
+
+                            // where to redirect to after logout
+                            PostLogoutRedirectUris = { "http://localhost:4200/home" },
+                            AllowedCorsOrigins = { "http://localhost:4200" },
+          
+                            AllowedScopes = new List<string>
+                            {
+                                IdentityServerConstants.StandardScopes.OpenId,
+                                IdentityServerConstants.StandardScopes.Profile,
+                                "recursoDeIdentidade1",
+                                "api1"
+                            }
                         }           
         };
     }
