@@ -49,6 +49,13 @@ export class AuthService {
     return this.oauthService.loadDiscoveryDocumentAndTryLogin();
   }
   
+  public getUserName(): string {
+    let claims = this.oauthService.getIdentityClaims();
+    if (!claims) 
+      return '-';
+    return claims['name'];
+  }
+
  
 }
 

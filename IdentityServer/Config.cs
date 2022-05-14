@@ -86,7 +86,7 @@ namespace IdentityServer
                             // where to redirect to after logout
                             PostLogoutRedirectUris = { "http://localhost:4200/home" },
                             AllowedCorsOrigins = { "http://localhost:4200" },
-          
+                            AlwaysIncludeUserClaimsInIdToken= true,
                             AllowedScopes = new List<string>
                             {
                                 IdentityServerConstants.StandardScopes.OpenId,

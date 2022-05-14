@@ -13,7 +13,6 @@ export class AppComponent implements OnInit{
   title = 'AngularClient';
   constructor(
     public authService: AuthService,
-    private activatedRoute: ActivatedRoute,
     private router: Router
   ) {
     this.authService.configureWithNewConfigApi();

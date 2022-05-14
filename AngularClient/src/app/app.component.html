@@ -5,7 +5,7 @@
     </div>
     <br/>    
     <div [hidden]="!authService.isLoggedIn()">
-        Olá Usuario!
+        Olá {{authService.getUserName()}} !
         <button (click)="authService.logout()">Logout</button>        
     </div>    
 </div>
