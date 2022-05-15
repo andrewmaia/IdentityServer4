@@ -10,8 +10,7 @@ import { authConfig } from './auth.config';
 })
 export class AuthService {
   constructor(
-    private oauthService: OAuthService,
-    private router:Router
+    private oauthService: OAuthService
   ){ 
   }  
 
