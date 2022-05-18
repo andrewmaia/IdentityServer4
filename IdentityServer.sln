@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityServer", "IdentityS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcClient", "MvcClient\MvcClient.csproj", "{04164894-B919-4BD5-B07E-BCB5FC524DA3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityServer", "IdentityServer_EntityFramework\IdentityServer.csproj", "{0CA3C652-9DFF-479C-A52E-64D94DFA327C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -72,5 +74,17 @@ Global
 		{04164894-B919-4BD5-B07E-BCB5FC524DA3}.Release|x64.Build.0 = Release|Any CPU
 		{04164894-B919-4BD5-B07E-BCB5FC524DA3}.Release|x86.ActiveCfg = Release|Any CPU
 		{04164894-B919-4BD5-B07E-BCB5FC524DA3}.Release|x86.Build.0 = Release|Any CPU
+		{0CA3C652-9DFF-479C-A52E-64D94DFA327C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CA3C652-9DFF-479C-A52E-64D94DFA327C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CA3C652-9DFF-479C-A52E-64D94DFA327C}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{0CA3C652-9DFF-479C-A52E-64D94DFA327C}.Debug|x64.Build.0 = Debug|Any CPU
+		{0CA3C652-9DFF-479C-A52E-64D94DFA327C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0CA3C652-9DFF-479C-A52E-64D94DFA327C}.Debug|x86.Build.0 = Debug|Any CPU
+		{0CA3C652-9DFF-479C-A52E-64D94DFA327C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CA3C652-9DFF-479C-A52E-64D94DFA327C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CA3C652-9DFF-479C-A52E-64D94DFA327C}.Release|x64.ActiveCfg = Release|Any CPU
+		{0CA3C652-9DFF-479C-A52E-64D94DFA327C}.Release|x64.Build.0 = Release|Any CPU
+		{0CA3C652-9DFF-479C-A52E-64D94DFA327C}.Release|x86.ActiveCfg = Release|Any CPU
+		{0CA3C652-9DFF-479C-A52E-64D94DFA327C}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
