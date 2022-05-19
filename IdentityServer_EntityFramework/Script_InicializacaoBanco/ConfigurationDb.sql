@@ -363,3 +363,27 @@ CREATE UNIQUE INDEX [IX_IdentityResources_Name] ON [IdentityResources] ([Name]);
 
 GO
 
+/*
+Select * from ApiResources(Nolock)
+Select * from ApiScopes(Nolock)
+Select * from Clients(Nolock)
+Select * from IdentityResources(Nolock)
+Select * from ApiResourceClaims(Nolock)
+Select * from ApiResourceProperties(Nolock)
+Select * from ApiResourceScopes(Nolock)
+Select * from ApiResourceSecrets(Nolock)
+Select * from ApiScopeClaims(Nolock)
+Select * from ApiScopeProperties(Nolock)
+Select * from ClientClaims(Nolock)
+Select * from ClientCorsOrigins(Nolock)
+Select * from ClientGrantTypes(Nolock)
+Select * from ClientIdPRestrictions(Nolock)
+Select * from ClientPostLogoutRedirectUris(Nolock)
+Select * from ClientProperties(Nolock)
+Select * from Clients(Nolock)
+Select * from ClientRedirectUris(Nolock)
+Select * from ClientScopes(Nolock)
+Select * from ClientSecrets(Nolock)
+Select * from IdentityResourceClaims(Nolock)
+Select * from IdentityResourceProperties(Nolock)
+*/

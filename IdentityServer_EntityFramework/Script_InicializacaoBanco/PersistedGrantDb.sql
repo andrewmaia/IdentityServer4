@@ -49,3 +49,7 @@ CREATE INDEX [IX_PersistedGrants_SubjectId_SessionId_Type] ON [PersistedGrants] 
 
 GO
 
+/*
+Select * from DeviceCodes(Nolock)
+Select * from PersistedGrants(Nolock)
+*/
