@@ -63,7 +63,8 @@ namespace IdentityServer
                             // where to redirect to after logout
                             PostLogoutRedirectUris = { "https://localhost:5002/signout-callback-oidc" },
                             RequireConsent = true,
-
+                            AllowOfflineAccess = true,
+                            
                             AllowedScopes = new List<string>
                             {
                                 IdentityServerConstants.StandardScopes.OpenId,

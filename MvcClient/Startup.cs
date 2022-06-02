@@ -43,6 +43,7 @@ namespace MvcClient
                     options.ResponseType = "code";
                     options.Scope.Add("recursoDeIdentidade1");
                     options.Scope.Add("api1");
+                    options.Scope.Add("offline_access");
 
                     options.GetClaimsFromUserInfoEndpoint = true;  
                     options.ClaimActions.MapJsonKey("Claim1", "Claim1");
