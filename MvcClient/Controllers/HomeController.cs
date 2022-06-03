@@ -47,6 +47,16 @@ namespace MvcClient.Controllers
 
         public async Task<IActionResult> CallApi()
         {
+            var accessToken = await HttpContext.GetTokenAsync("access_token");
+            var client = new HttpClient();
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", accessToken);
+            var response =  await client.GetAsync("https://localhost:6001/identity");
+            string retorno = await response.Content.ReadAsStringAsync();
+            ViewBag.Json = JArray.Parse(retorno).ToString();
+            return View("json");
+        }
+        public async Task<IActionResult> CallApiWithRefreshToken()
+        {
             var response = await AccessTokenRefreshWrapper(
                 ()=> SecuredGetRequest("https://localhost:6001/identity")
             );
