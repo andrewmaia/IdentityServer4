@@ -9,6 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.AspNetCore.Authentication.Google;
 using IdentityServer4;
+using System.Security.Cryptography.X509Certificates;
 
 namespace IdentityServer
 {
@@ -41,6 +42,10 @@ namespace IdentityServer
                     options.ClientId = "325879107012-sh4iv3ji200u2sgk9t5pfqotk8a3p3gk.apps.googleusercontent.com";
                     options.ClientSecret = "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";
                 });                
+
+            //Exemplo com PFX de verdade (necessário fornecer path do arquivo e sua senha):
+            //var certificado = new X509Certificate2("C:\\repos\\IdentityServer4\\IdentityServer\\identityServerCert.pfx","teste");
+            //builder.AddSigningCredential(certificado);
 
             // not recommended for production - you need to store your key material somewhere secure
             builder.AddDeveloperSigningCredential();
